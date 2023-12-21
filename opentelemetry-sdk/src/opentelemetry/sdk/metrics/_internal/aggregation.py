@@ -1005,6 +1005,7 @@ class _ExponentialBucketHistogramAggregation(_Aggregation[HistogramPoint]):
 
             bucket_index = index - previous_buckets.index_base
 
+            print(bucket_index, span, index, previous_bucket.index_base, previous_buckets.counts)
             if bucket_index < 0:
                 bucket_index += len(previous_buckets.counts)
 
